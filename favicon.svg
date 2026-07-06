@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#050607"/>
-  <path d="M16 46 28 17h8l12 29h-8l-2.2-5.8H26.1L24 46h-8Zm12.5-12.3h7l-3.5-9.5-3.5 9.5Z" fill="#f4f6f7"/>
-  <path d="M49.5 19.5c-3.8-3.7-10.2-3.3-13.5.7-3.4 4.1-2.7 10.2 1.5 13.5 3.9 3.1 9.8 2.7 13.1-.9" fill="none" stroke="#f4f6f7" stroke-width="5" stroke-linecap="round"/>
-  <rect x="30" y="43" width="7" height="7" fill="#d90000"/>
+  <defs>
+    <linearGradient id="mark-bg" x1="10" y1="8" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e8f4f5"/>
+      <stop offset="0.52" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7faf9"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="54" height="54" rx="14" fill="url(#mark-bg)"/>
+  <rect x="5.5" y="5.5" width="53" height="53" rx="13.5" fill="none" stroke="#d8e1e4"/>
+  <path d="M5 46c0 7.2 5.8 13 13 13h28c7.2 0 13-5.8 13-13v1.5c0 7.2-5.8 13-13 13H18c-7.2 0-13-5.8-13-13V46Z" fill="#d90000"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#101719">AC</text>
 </svg>
