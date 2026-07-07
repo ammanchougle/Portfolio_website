@@ -265,8 +265,7 @@ h3 {
   border-bottom: 1px solid rgba(16, 23, 25, 0.09);
 }
 
-.system-header span,
-.telemetry-grid span {
+.system-header span {
   color: rgba(5, 6, 7, 0.72);
   font-size: 0.78rem;
   font-weight: 800;
@@ -280,98 +279,75 @@ h3 {
   font-size: 0.94rem;
 }
 
-.system-board {
+.mechatronic-scene {
   position: relative;
   overflow: hidden;
-  height: 164px;
+  height: 230px;
   margin: 18px 20px;
   border: 1px solid rgba(16, 23, 25, 0.1);
   border-radius: 16px;
   background:
     linear-gradient(90deg, rgba(8, 116, 129, 0.12) 1px, transparent 1px),
     linear-gradient(rgba(8, 116, 129, 0.12) 1px, transparent 1px),
-    radial-gradient(circle, rgba(16, 23, 25, 0.24) 1px, transparent 1.5px) 0 0 / 18px 18px,
-    linear-gradient(135deg, #f8fbfb, #e8f1f2);
-  background-size: 54px 54px, 54px 54px, 18px 18px, auto;
+    radial-gradient(circle, rgba(16, 23, 25, 0.18) 1px, transparent 1.5px) 0 0 / 18px 18px,
+    linear-gradient(135deg, #fbfdfc, #e8f1f2);
+  background-size: 56px 56px, 56px 56px, 18px 18px, auto;
+}
+
+.controller-board {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 116px;
+  height: 86px;
+  border: 1px solid rgba(16, 23, 25, 0.16);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(217, 0, 0, 0.85) 0 4px, transparent 5px),
+    linear-gradient(135deg, rgba(8, 116, 129, 0.16), transparent 42%),
+    #ffffff;
+  box-shadow: 0 18px 36px rgba(21, 38, 43, 0.14);
+  transform: translate(-50%, -50%);
 }
 
 .board-chip {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 52%;
   display: grid;
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 46px;
   place-items: center;
-  border-radius: 15px;
+  border-radius: 12px;
   background: #101719;
   color: #f7faf9;
   font-family: "Space Grotesk", Inter, sans-serif;
-  font-size: 1rem;
+  font-size: 0.86rem;
   font-weight: 900;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 7px rgba(8, 116, 129, 0.07), 0 14px 28px rgba(21, 38, 43, 0.18);
+  box-shadow: 0 0 0 6px rgba(8, 116, 129, 0.08);
 }
 
-.signal-line,
-.signal-node {
+.pin-row {
   position: absolute;
-  display: block;
+  top: 19px;
+  width: 6px;
+  height: 48px;
+  background: repeating-linear-gradient(180deg, rgba(16, 23, 25, 0.38) 0 3px, transparent 3px 8px);
 }
 
-.signal-line {
-  height: 2px;
-  background: rgba(8, 116, 129, 0.48);
+.pins-left {
+  left: 13px;
 }
 
-.line-a {
-  left: 24px;
-  top: 48px;
-  width: 116px;
+.pins-right {
+  right: 13px;
 }
 
-.line-b {
-  right: 24px;
-  top: 96px;
-  width: 120px;
-}
-
-.line-c {
-  left: 50%;
-  top: 18px;
-  width: 2px;
-  height: 124px;
-  transform: translateX(-50%);
-}
-
-.signal-node {
-  width: 13px;
-  height: 13px;
-  border: 2px solid rgba(8, 116, 129, 0.58);
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 18px rgba(8, 116, 129, 0.2);
-}
-
-.node-a {
-  left: 18px;
-  top: 41px;
-}
-
-.node-b {
+.board-led {
+  position: absolute;
   right: 18px;
-  top: 89px;
-}
-
-.node-c {
-  left: calc(50% - 6px);
-  bottom: 16px;
-}
-
-.status-dot {
-  position: absolute;
-  right: 22px;
-  bottom: 18px;
+  top: 16px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -379,29 +355,144 @@ h3 {
   box-shadow: 0 0 0 6px rgba(217, 0, 0, 0.08);
 }
 
-.telemetry-grid {
+.robot-base {
+  position: absolute;
+  left: 34px;
+  bottom: 34px;
+  width: 62px;
+  height: 24px;
+  border: 1px solid rgba(16, 23, 25, 0.16);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(21, 38, 43, 0.1);
+}
+
+.robot-arm {
+  position: absolute;
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(8, 116, 129, 0.14), rgba(16, 23, 25, 0.08)),
+    #ffffff;
+  border: 1px solid rgba(16, 23, 25, 0.16);
+  transform-origin: left center;
+}
+
+.arm-lower {
+  left: 75px;
+  bottom: 58px;
+  width: 94px;
+  transform: rotate(-34deg);
+}
+
+.arm-upper {
+  left: 147px;
+  bottom: 106px;
+  width: 78px;
+  transform: rotate(24deg);
+}
+
+.robot-joint {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(8, 116, 129, 0.52);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 18px rgba(8, 116, 129, 0.2);
+}
+
+.joint-one {
+  left: 64px;
+  bottom: 50px;
+}
+
+.joint-two {
+  left: 138px;
+  bottom: 98px;
+}
+
+.sensor-module,
+.motor-module {
+  position: absolute;
+  right: 28px;
+  border: 1px solid rgba(16, 23, 25, 0.15);
+  background: #ffffff;
+  box-shadow: 0 14px 26px rgba(21, 38, 43, 0.1);
+}
+
+.sensor-module {
+  top: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.sensor-module::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 2px solid rgba(8, 116, 129, 0.52);
+  border-radius: 50%;
+}
+
+.motor-module {
+  bottom: 34px;
+  width: 58px;
+  height: 48px;
+  border-radius: 14px;
+}
+
+.motor-module::before {
+  content: "M";
+  position: absolute;
+  inset: 9px;
   display: grid;
-  grid-template-columns: 1fr;
+  place-items: center;
+  border: 1px solid rgba(8, 116, 129, 0.34);
+  border-radius: 50%;
+  color: var(--green);
+  font-family: "Space Grotesk", Inter, sans-serif;
+  font-weight: 800;
+}
+
+.signal-path {
+  position: absolute;
+  display: block;
+  height: 2px;
+  background: rgba(8, 116, 129, 0.46);
+}
+
+.path-sensor {
+  right: 80px;
+  top: 58px;
+  width: 86px;
+}
+
+.path-motor {
+  right: 86px;
+  bottom: 58px;
+  width: 76px;
+}
+
+.stack-labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
   border-top: 1px solid rgba(16, 23, 25, 0.09);
+  background: rgba(16, 23, 25, 0.08);
 }
 
-.telemetry-grid div {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 20px;
-  border-bottom: 1px solid rgba(16, 23, 25, 0.08);
-}
-
-.telemetry-grid div:last-child {
-  border-bottom: 0;
-}
-
-.telemetry-grid strong {
-  max-width: 170px;
-  text-align: right;
-  color: #050607;
-  font-size: 0.96rem;
+.stack-labels span {
+  padding: 15px 12px;
+  background: rgba(255, 255, 255, 0.76);
+  color: #36484d;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .button,
@@ -868,7 +959,7 @@ h3 {
     padding-bottom: 42px;
   }
 
-  .system-board {
+  .mechatronic-scene {
     height: 160px;
   }
 
