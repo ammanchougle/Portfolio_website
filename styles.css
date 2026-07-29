@@ -819,8 +819,8 @@ h3 {
 
 .contact-links {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(76px, 1fr));
+  gap: 12px;
   justify-content: stretch;
   margin-top: 0;
 }
@@ -836,6 +836,11 @@ h3 {
   stroke-width: 2;
 }
 
+.brand-icon {
+  fill: currentColor;
+  stroke: none;
+}
+
 .button-icon {
   display: inline-grid;
   width: 24px;
@@ -848,16 +853,42 @@ h3 {
 }
 
 .contact-links a {
-  min-height: 62px;
-  justify-content: flex-start;
+  min-height: 104px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 18px;
-  padding: 12px 14px;
+  padding: 14px 10px;
+  text-align: center;
 }
 
-.contact-links a .icon {
-  width: 22px;
-  height: 22px;
-  color: var(--green);
+.contact-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(16, 23, 19, 0.12);
+}
+
+.contact-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.gmail-icon {
+  background: #ffffff;
+  color: #d93025;
+}
+
+.phone-icon {
+  background: #e6f0df;
+  color: #4f6f3a;
+}
+
+.linkedin-icon {
+  background: #0a66c2;
+  color: #ffffff;
 }
 
 .contact-links span {
@@ -868,13 +899,6 @@ h3 {
 .contact-links strong {
   font-size: 0.92rem;
   line-height: 1.1;
-}
-
-.contact-links small {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 650;
-  line-height: 1.2;
 }
 
 .site-footer {
