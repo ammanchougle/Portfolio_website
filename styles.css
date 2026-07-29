@@ -549,7 +549,8 @@ h3 {
 }
 
 .section-heading.centered p:not(.eyebrow) {
-  max-width: 580px;
+  width: fit-content;
+  max-width: min(520px, 100%);
   text-align: center;
   text-wrap: balance;
 }
@@ -563,7 +564,8 @@ h3 {
 }
 
 .section-heading.centered > p:not(.eyebrow) {
-  max-width: 580px;
+  width: fit-content;
+  max-width: min(520px, 100%);
   margin: 10px auto 0;
   text-align: center;
 }
