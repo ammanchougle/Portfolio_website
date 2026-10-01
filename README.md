@@ -1,2 +1,2 @@
 # Portfolio_website
-Repository describing me
+I'm a Mechatronics Engineer who designs and builds sensing hardware, from circuit and firmware to enclosure. I've built IoT analytics and control systems for wastewater treatment plants on Raspberry Pi hardware, a tool that brings traditional PLCs onto a tablet for remote access, and the 3D-printed mechanical design and actuation of a published soft robotic arm (Actuators, MDPI, 2026). MSc in Mechatronics & Robotics, University of Leeds. Open to hardware, embedded and sensing roles in the UK.
